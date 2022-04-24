@@ -96,7 +96,8 @@ def get_proton(version=None, yes=True, dl_only=False, output=None) -> None:
             print('[ERROR] invalid tag / binary not found')
         return False
 
-    protondir = installdir + 'Proton-' + data['version']
+    #protondir = installdir + 'Proton-' + data['version']
+    protondir = installdir + data['version']
     checksum_dir = protondir + '/sha512sum'
     source_checksum = requests.get(data['checksum']).text if 'checksum' in data else None
     local_checksum = open(checksum_dir).read() if os.path.exists(checksum_dir) else None
@@ -161,10 +162,10 @@ def get_proton(version=None, yes=True, dl_only=False, output=None) -> None:
 
 def remove_proton(version=None) -> bool:
     """Uninstall existing proton installation"""
-    if not version.startswith("Proton-"):
-        version = "Proton-" + version
+    #if not version.startswith("Proton-"):
+    #    version = "Proton-" + version
     target = install_directory() + version
     if os.path.exists(target):
         shutil.rmtree(target)
         return True
-    return False
+    #return False
