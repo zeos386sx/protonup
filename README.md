@@ -1,7 +1,11 @@
+##zeos386sx fork
+I removed a handful of lines from api.py so that it should now work with the new folderr structure of Glorious Eggroll.
+
+Hopefully.
+
 ## Introduction
 CLI program and API to automate the installation and update of [GloriousEggroll](https://github.com/GloriousEggroll/)'s [Proton-GE](https://github.com/GloriousEggroll/proton-ge-custom)
 
-[![Downloads](https://pepy.tech/badge/protonup)](https://pepy.tech/project/protonup)
 
 ## Installation
 Install from Python Package Index
